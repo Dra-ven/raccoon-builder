@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raccoon Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="raccoon-builder">
+    <div id="raccoon-preview" class="raccoon-container">
+        <img id="background-layer" src="images/background/white.png" alt="Background">
+        <img id="body-layer" src="images/body/body.png" alt="Body">
+        <img id="eyes-layer" src="images/eyes/black.png" alt="Eyes">
+        <img id="hair-layer" src="images/hair/default.png" alt="Hair">
+        <img id="accessories-layer" src="images/accessories/default.png" alt="Accessory">
+        <img id="clothing-layer" src="images/clothing/default.png" alt="Clothing">
+    </div>
+
+    <button id="save-image-btn">Save Image</button>
+
+    <h3>Build Your Raccoon</h3>
+    
+    <div id="controls">
+        <label>
+        Background:
+        <select id="background-select">
+            <option value="white.png">White</option>
+            <option value="blue.png">Blue</option>
+            <option value="brown.png">Brown</option>
+            <option value="green.jpg">Green</option>
+            <option value="night-sky.png">Night Sky</option>
+            <option value="orange.png">Orange</option>
+            <option value="pink.png">Pink</option>
+            <option value="purple.png">Purple</option>
+            <option value="red.png">Red</option>
+            <option value="yellow.png">Yellow</option>
+        </select>
+        </label>
+        <label>
+        Body:
+        <select id="body-select">
+            <option value="brown.png">Default</option>
+        </select>
+        </label>
+        <label>
+        Eyes:
+        <select id="eyes-select">
+            <option value="black.png">Black</option>
+            <option value="blue.png">Blue</option>
+            <option value="purple.png">Purple</option>
+            <option value="red.png">Red</option>
+        </select>
+        </label>
+        <label>
+            hair:
+            <select id="hair-select">
+                <option value="default.png">Select</option>
+                <option value="braids-gold.png">Braids (Gold)</option>
+                <option value="braids-pink.png">Braids (Pink)</option>
+                <option value="braids-white.png">Braids (White)</option>
+                <option value="curls-black.png">Curls (Black)</option>
+                <option value="curls-red.png">Curls (Red)</option>
+                <option value="mohawk-pink.png">Mohawk (Pink)</option>
+                <option value="mohawk-yellow.png">Mohawk (Yellow)</option>
+                <option value="mop head-blonde.png">Mop Head (Blonde)</option>
+                <option value="mop head-brown.png">Mop Head (Brown)</option>
+                <option value="mop head-pink.png">Mop Head (Pink)</option>
+                <option value="undercut-black.png">Undercut (Black)</option>
+                <option value="undercut-blonde.png">Undercut (Blonde)</option>
+                <option value="undercut-green.png">Undercut (Green)</option>
+                <option value="wig-blonde.png">Wig (Blonde)</option>
+                <option value="wig-brown.png">Wig (Brown)</option>
+            </select>
+            </label>
+        <label>
+        Clothing:
+        <select id="clothing-select">
+            <option value="default.png">Select</option>
+
+            <!-- T-Shirts -->
+            <option value="blue-t-shirt.png">T-shirt (Blue)</option>
+            <option value="macdonald-t-shirt-black.png">Macdonald T-shirt (Black)</option>
+            <option value="macdonald-t-shirt-yellow.png">Macdonald T-shirt (Yellow)</option>
+            <option value="pink-t-shirt.png">T-shirt (Pink)</option>
+            <option value="shredded tee.png">Shredded T-shirt</option>
+            <option value="striped-t-shirt 1.png">Striped T-shirt 1</option>
+            <option value="striped-t-shirt 2.png">Striped T-shirt 2</option>
+            <option value="yellow-t-shirt.png">T-shirt (Yellow)</option>
+            
+            <!-- Suits -->
+            <option value="black-suit.png">Suit (Black)</option>
+            <option value="blue-suit.png">Suit (Blue)</option>
+            <option value="brown-suit.png">Suit (Brown)</option>
+            <option value="grey-suit.png">Suit (Grey)</option>
+            <option value="grey suit x brown-shirt.png">Suit (Grey) + Brown Shirt</option>
+            <option value="red-suit.png">Suit (Red)</option>
+            
+            <!-- Jackets -->
+            <option value="beige-rock-jacket.png">Rock Jacket (Beige)</option>
+            <option value="blue-rock-jacket.png">Rock Jacket (Blue)</option>
+            <option value="mage-jacket-black.png">Mage Jacket (Black)</option>
+            <option value="mage-jacket-purple.png">Mage Jacket (Purple)</option>
+            <option value="orange-jacket 1.png">Jacket (Orange 1)</option>
+            <option value="orange-jacket 2.png">Jacket (Orange 2)</option>
+            <option value="padded-jacket-white.png">Padded Jacket (White)</option>
+            <option value="padded-jacket-yellow.png">Padded Jacket (Yellow)</option>
+            <option value="purple-jacket.png">Jacket (Purple)</option>
+            
+            <!-- Hoodies -->
+            <option value="black-hoodie.png">Hoodie (Black)</option>
+            <option value="brown-hoodie.png">Hoodie (Brown)</option>
+            <option value="grey-hoodie.png">Hoodie (Grey)</option>
+            
+            <!-- Coats -->
+            <option value="brown-coat.png">Coat (Brown)</option>
+            <option value="judge-coat.png">Judge Coat</option>
+            <option value="trench-coat.png">Trench Coat</option>
+            <option value="white-coat.png">Coat (White)</option>
+            
+            <!-- Capes -->
+            <option value="traveler-cape-brown.png">Traveler Cape (Brown)</option>
+            <option value="traveler-cape-purple.png">Traveler Cape (Purple)</option>
+            <option value="traveler-cape-red.png">Traveler Cape (Red)</option>
+            
+            <!-- Tank Tops -->
+            <option value="tank-top-blue.png">Tank Top (Blue)</option>
+            <option value="tank-top-red.png">Tank Top (Red)</option>
+            <option value="tank-top-yellow.png">Tank Top (Yellow)</option>
+            
+            <!-- Traditional Attires -->
+            <option value="traditional-attire-blue.png">Traditional Attire (Blue)</option>
+            <option value="traditional-attire-pink.png">Traditional Attire (Pink)</option>
+            
+            <!-- Overalls -->
+            <option value="blue-overall.png">Overall (Blue)</option>
+            <option value="pink-overall.png">Overall (Pink)</option>
+            <option value="purple-overall.png">Overall (Purple)</option>
+            
+            <!-- Shirts -->
+            <option value="beige-shirt.png">Shirt (Beige)</option>
+            <option value="blue-shirt.png">Shirt (Blue)</option>
+            <option value="green-shirt.png">Shirt (Green)</option>
+            <option value="green-shirt 2.png">Shirt (Green 2)</option>
+            <option value="vintage-shirt-blue.png">Vintage Shirt (Blue)</option>
+            <option value="vintage-shirt-orange.png">Vintage Shirt (Orange)</option>
+            <option value="white-shirt.png">Shirt (White)</option>
+            <option value="yellow-shirt.png">Shirt (Yellow)</option>
+            
+            <!-- Wrappers -->
+            <option value="wrapper.png">Wrapper</option>
+            <option value="wrapper-cave-man.png">Wrapper (Caveman)</option>
+            
+            <!-- Kimonos -->
+            <option value="orange-kimono.png">Kimono (Orange)</option>
+            <option value="purple-kimono.png">Kimono (Purple)</option>
+            
+            <!-- Special Items -->
+            <option value="scallop-top-pink.png">Scallop Top (Pink)</option>
+            <option value="scallop-top-purple.png">Scallop Top (Purple)</option>
+            <option value="scallop-top-red.png">Scallop Top (Red)</option>
+            <option value="scallop-top-yellow.png">Scallop Top (Yellow)</option>
+            <option value="shadowed-veil-brown.png">Shadowed Veil (Brown)</option>
+            <option value="shadowed-veil-white.png">Shadowed Veil (White)</option>
+        </select>
+        </label>
+        <label>
+        accessories:
+        <select id="accessories-select">
+            <option value="default.png">Select</option>
+
+            <!-- Hats -->
+            <option value="baseball-cap-black.png">Baseball Cap (Black)</option>
+            <option value="baseball-cap-blue.png">Baseball Cap (Blue)</option>
+            <option value="baseball-cap-pink.png">Baseball Cap (Pink)</option>
+            <option value="beret-brown.png">Beret (Brown)</option>
+            <option value="brown-hat.png">Hat (Brown)</option>
+            <option value="emperor-hat.png">Emperor Hat</option>
+            <option value="flat-cap-black.png">Flat Cap (Black)</option>
+            <option value="flat-cap-brown.png">Flat Cap (Brown)</option>
+            <option value="sun-hat-brown.png">Sun Hat (Brown)</option>
+            <option value="sun-hat-green.png">Sun Hat (Green)</option>
+            <option value="striped-cap.png">Striped Cap</option>
+            
+            <!-- Headbands -->
+            <option value="bandana.png">Bandana</option>
+            <option value="caveman-headband.png">Caveman Headband</option>
+            <option value="headband-blue.png">Headband (Blue)</option>
+            <option value="headband-pink.png">Headband (Pink)</option>
+            <option value="headband-white.png">Headband (White)</option>
+            <option value="mage-head-band.png">Mage Headband</option>
+            
+            <!-- Scarves -->
+            <option value="scarf-white.png">Scarf (White)</option>
+            <option value="scarf-green.png">Scarf (Green)</option>
+            <option value="scarf-red.png">Scarf (Red)</option>
+            
+            <!-- Glasses -->
+            <option value="glasses-black.png">Glasses (Black)</option>
+            <option value="glasses-white.png">Glasses (White)</option>
+            <option value="sun-glasses.png">Sunglasses</option>
+            
+            <!-- Masks -->
+            <option value="mask.png">Mask</option>
+        </select>
+        </label>
+        <button id="randomize-btn">Randomize</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    </div>
+</body>
+</html>

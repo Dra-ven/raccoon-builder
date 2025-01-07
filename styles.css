@@ -1,0 +1,165 @@
+/* General styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    color: #333;
+}
+
+#raccoon-builder {
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.raccoon-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    background: #f7f7f7;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.raccoon-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+#eyes-layer {
+    margin-left: 3.3px;
+}
+
+#controls {
+    margin-top: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #555;
+}
+
+select {
+    max-height: 50px; 
+    overflow-y: auto; 
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+select::-webkit-scrollbar {
+    width: 8px;
+}
+
+select::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+select::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+select::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+button {
+    width: 100%;
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.raccoon-container {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+button, select, label {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    #raccoon-builder {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .raccoon-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}

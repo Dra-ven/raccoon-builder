@@ -90,32 +90,11 @@ function randomizeTraits() {
 
 function saveImage() {
     const previewElement = document.getElementById("raccoon-preview");
-    
-    // Check if all images are loaded
-    const images = previewElement.querySelectorAll('img');
-    let imagesLoaded = 0;
-    
-    // Helper function to check if an image is loaded
-    function checkImageLoad() {
-        imagesLoaded += 1;
-        if (imagesLoaded === images.length) {
-            // All images are loaded, now capture the image
-            html2canvas(previewElement).then((canvas) => {
-                const link = document.createElement("a");
-                link.download = "raccoon-design.png";
-                link.href = canvas.toDataURL();
-                link.click();
-            });
-        }
-    }
-
-    // Attach onload listeners to each image if they are not already loaded
-    images.forEach((img) => {
-        if (img.complete) {
-            checkImageLoad(); // Image already loaded
-        } else {
-            img.onload = checkImageLoad; // Attach onload handler
-        }
+    html2canvas(previewElement).then((canvas) => {
+        const link = document.createElement("a");
+        link.download = "raccoon-design.png";
+        link.href = canvas.toDataURL();
+        link.click();
     });
 }
 
